@@ -385,3 +385,333 @@ sum(itera,0)
 max(itera)
 #tìm giá trị nhỏ nhất min()
                           #hàm sắp sết sorted #reverse = true
+
+#bài hàm nhập xuất trong python
+
+#sep = "" tạo kí tự khoảng cách
+print ("Kteam","solo",sep ="===")
+#end ko xuống dòng
+print ("khong xuong dong", end ="")
+
+'''hàm đợi:
+import time 
+time.sleep = (3)'''
+
+#một cách mở file(ghi vào file)(đóng luôn sau khi sử dụng)
+
+with open("ghivaofile.txt", 'w' ) as ten:
+  print ("ghi vao file", file = ten)
+
+
+# in ra giá trị khi không có newline(khi dùng hàm end = "")
+from time import sleep
+
+print ("start...",end = "",flush = True)
+sleep (3)
+print ("end...")
+
+#tạo chương tình đánh từng chữ
+import time
+
+a = "za"
+b = "warudo!"
+for c in a + b:
+  print (c , end = "", flush  = True)
+  time.sleep(0.1)
+
+# hàm evel có khả năng thực thi một expression (khá là phức tạp nên sẽ tìm hiểu sau)
+    #ví dụ đối với hàm input khi kết hợp có thể thực thi lệnh ngay trên dòng nhập input: eval(input(""))
+
+#kiểm tra giá trị ACSII bằng hàm ord("")
+
+#break :kết thúc vòng lặp while
+#continue tiếp tục vòng lặp while
+
+#Hàm try() được sử dụng trong việc xử lý lỗi và ngoại lệ trong Python
+            #Cú pháp cơ bản:
+
+try:
+  // Code
+except:
+  // Code
+
+#items
+
+aduvjp = {"name":"team","wow":69}
+print (aduvjp.items())
+#làm gọn dễ nhìn
+aduvjp = {"name":"team","wow":69}
+value = list(aduvjp.items())
+print (value)
+
+#for else( kết thúc vòng lặp sẽ dùng câu lệnh ở else)
+for k in (1,2,3):
+  print (k)
+
+else:
+  print("done")
+#ví dụ khác
+for k in (1,2,3):
+  print (k)
+  if k % 2 == 0:
+    break
+else:
+  print("done")
+
+#ví dụ khác
+for k in (1,2,3):
+  print (k)
+  if k % 2 == 0:
+    continue
+else:
+  print("done")
+
+#hàm range tạo danh sách theo số đặt bên trong
+k = range(6)
+print (list(k)) # range từ 0,6 (0 đến 6)
+#
+k = range(6,9)
+print (list(k))
+#range ngược
+k = range(4 , 1 , -1)
+print (list(k))
+#vd khác
+lst = [5,(1,2,3), {"abc","xyz"}]
+for i in range(len(lst)):
+  print (1st[i])
+#cập nhật list phải dùng range
+lst = [5,(1,2,3), {"abc","xyz"}]
+for i in range(len(lst)):
+  lst[i] += 1
+  print (lst[i])
+#hàm enumerate
+student_list = ["alo","buh bub","lmao lmao"]
+
+gen = enumerate(student_list)
+print (list(gen))
+#  ví dụ khác
+db = ["alo","buh bub","lmao lmao"]
+for idx, student in enumerate(db,9):
+  print (idx, "=", student)
+
+# lưu chữ một khối lệnh để có thể tái sử dụng
+'''Trong Python, pass là một lệnh trống.
+ Nói nôm na thì lệnh pass không làm gì cả, nó chỉ 
+ giữ chỗ cho các hàm, vòng lặp mà bạn đã thêm vào, nhưng
+  chưa dùng đến trong hiện tại mà để "dành cho con cháu"
+   mở rộng trong tương lai.'''
+def Kteam():
+  print ("aduvjp")
+Kteam()
+
+#truyền parameter
+def Kteam(text):
+  print (text)
+Kteam()
+
+
+#set default cho param
+def Kteam(age,text = "sasuke"):
+  print (text)
+  print (age)
+Kteam(28)
+#ví dụ 
+def f (kteam=[]):
+  kteam.append("F")
+  print (kteam)
+f()
+#ví dụ keyword
+def kteam(a,b):
+  pass
+
+kteam(3,'Free')
+kteam(b = 3,a ='Free')
+
+#dùng * vào phần keyword def ... (a,*,b) để đánh dấu ngăn cách pos và keyword
+
+#unpack
+def team(a,b,c,d):
+  print (k,t,e,r)
+lst = ['za','wa','ru','do']
+kteam(*lst)
+#truyền thêm thì đưa thêm kteam(*lst, "bla bla")
+#vd khác 
+def team(*muda):
+  print (muda)
+  print(type(muda))
+
+team(*(x for x in range(10)))
+#ví dụ khác
+def kteam(a,b):
+  print (a)
+  print (b)
+
+
+dic = {'name':'duma','fuck':'muda'}
+kteam(**dic)
+#ví dụ nữa
+def team(**kdu):
+  print(kdu)
+
+team(name='kteam',member=69)
+
+#vd nữa
+def team(**kdu):
+  for key,value in kdu.items(): 
+    print(kdu)
+
+team(name='kteam',member=69)
+#ví dụ tiếp
+kteam = "howk"
+def say():
+  kteam_ = "howkteam"
+  print ("weare",kteam)
+say()
+
+#tạo ra các biến toàn cục để tái sử dụng lại bằng gobal
+def a():
+  global kteam
+  kteam = "howkteam"
+
+a()
+print (kteam)
+
+#ví dụ
+def make_global():
+  global x
+  x = 1
+
+def local():
+  x = 5
+  print ("x in local", x)
+
+make_global()
+print (x)
+
+local()
+print (x)
+
+#dùng return để ngắt hàm
+def _return ():
+  print ("haha")
+  return
+  print ("không được gọi tới")
+
+goi_ham = _return()
+print (type(goi_ham))
+#gọi ra nhiều thành phần trong hàm cùng return
+def a(a,b):
+  c = (int(a) + (b))
+  d = int(a) - int(b)
+  return a,b 
+a_ = 3
+b_ = 2
+tong_tru = a(a = a_, b = b_)
+print (tong_tru)
+# hàm yield sẽ trả về một generator mà ko chạy ngay
+def adu(lst):
+  for num in lst:
+    yield num**2
+
+kteam = adu([1,2,3])
+for value in kteam:
+  print(value)
+
+#return sau khi đưa ra giá trị sẽ ngắt luôn hàm còn yield sẽ tiếp tục hàm
+
+#ví dụ về send và next
+def gk():
+  while True:
+    x = yield 
+    yield x ** 2
+
+g = gk()
+next(g)
+print (g.send(2))
+next(g)
+print (g.send(10))
+
+#cách sử dụng lambda khá giống def
+ave = lambda a,b,c: (a + b + c)/3
+
+print (ave(1,2,3))
+#ví dụ khác
+x_a = lambda x, a=2: x ** a
+
+print (x_a(2))
+
+# ví dụ khác
+
+kteam_lst = [lambda x: x**2 , lambda x: x**3]
+print (kteam_list[1](3))
+ #mở rộng ví dụ trên
+for fuc in kteam_list:
+  print(fuc(3))
+
+#ví dụ khác
+key1 = "a ne"
+
+print({"b ne": lambda:"cung voi b",
+  "c ne":lambda:"cung voi c",
+  "a ne":lambda:"cung voi a"}[key1]())
+
+#vi du
+adu = lambda x,y: x if x > y else y
+print (adu(1,2))
+#ví dụ
+def kteam(first_string):
+  return lambda second_string: first_string + second_string # trả về một hàm, và lưu biến first_string
+a = kteam("how team k")
+print (a("dcm thang cho nay m chan song a"))
+
+#hàm map thêm 1 đơn vị cho tất cả các thứ trong 1 list 
+
+def adu(x): return x + 1
+
+kteam = [1,2,3,4]
+
+print(list(map(adu, kteam)))
+#or 
+inc = lambda x: x + 1
+kteam = [1,2,3,4]
+print([inc(x) for x in kteam])
+
+#ví dụ
+
+func = lambda x,y: x + y
+k1 = [1,2]
+k2 = [3,4]
+kteam = map(func,k1,k2)
+print (kteam)
+
+#filter lọc
+func = lambda x: x>0
+kteam = [1,-3,5,-2]
+print(filter(func,kteam))
+#or
+print([x for x in kteam if x > 0])
+
+#reduce tính tất các số trong list hoặc cộng lần lượt bằng cách gom
+from functools import*
+kteam_add = lambda x,y: x + y
+kteam = ["dit","me","dang","gom"]
+#đệ quy python (khó hiểu)
+
+def cal(l):
+  return 0 if not L[0] + cal_sum(L[1:])
+
+print (cal([1,2,3]))
+
+
+#ví dụ hàm đệ quy
+def giaithua(n):
+    """Đây là hàm tính giai thừa của
+    một số nguyên by Quantrimang.com"""
+    if n == 1: 
+       return 1 
+    else: 
+        return (n * giaithua(n-1))
+num = 5
+num1 = int(input("Nhập số cần tính giai thừa: "))
+print("Giai thừa của", num, "là", giaithua(num)) 
+print("Giai thừa của", num1, "là", giaithua(num1)) 
